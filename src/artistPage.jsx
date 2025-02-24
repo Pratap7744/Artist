@@ -35,11 +35,21 @@ import z from "../src/assets/z.jpg"
 import aa from "../src/assets/aa.jpg"
 import bb from "../src/assets/bb.jpg"
 import cc from "../src/assets/cc.jpg"
+import ee from "../src/assets/ee.jpg"
+import ff from "../src/assets/ff.jpg"
+import gg from "../src/assets/gg.jpg"
+import dd from "../src/assets/dd.jpg"
 
 
 import a1 from "../src/assets/a1.jpg"
 import a2 from "../src/assets/a2.jpg"
 import a3 from "../src/assets/a3.jpg"
+import a4 from "../src/assets/a4.jpg"
+import a5 from "../src/assets/a5.jpg"
+import a6 from "../src/assets/a6.jpg"
+import a7 from "../src/assets/a7.jpg"
+import a8 from "../src/assets/a8.jpg"
+import a9 from "../src/assets/a9.jpg"
 
 
 import vid1 from "../src/assets/vid1.mp4"
@@ -64,6 +74,7 @@ import h15 from "../src/assets/h15.jpg"
 import h16 from "../src/assets/h16.jpg"
 import h17 from "../src/assets/h17.jpg"
 import h18 from "../src/assets/h18.jpg"
+import h19 from "../src/assets/h19.jpg"
 
 import logo from "../src/assets/logo.jpg"
 
@@ -151,12 +162,12 @@ const BeautyAndEmbroideryWebsite = () => {
 
   const portfolioImages = {
     makeup: [
-      aa,a123,
-      b,
-      c,d,bb,e,f,g,h,cc,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,
+      ff,aa,a123,
+      b,dd,
+      c,d,gg,bb,e,ee,f,g,ff,h,cc,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,
     ],
     embroidery: [
-      a1,a2,a3
+      a1,a2,a3,a4,a5,a6,a7,a8,a9
     ],
   };
 
@@ -235,7 +246,7 @@ const BeautyAndEmbroideryWebsite = () => {
 
 
   const FakeAPI = [
-    h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,h11,h12,h13,h14,h15,h16,h17,h18
+    h19,h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,h11,h12,h13,h14,h15,h16,h17,h18,
   ];
 
   const [images, setImages] = useState([]);
@@ -320,7 +331,7 @@ const BeautyAndEmbroideryWebsite = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className={`pt-24 pb-30 px-4 ${
+      <section className={`pt-25 pb-30 px-4 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       } transition-all duration-1000`} id='Home'>
         <div className="max-w-7xl mx-auto text-center mt-6">
@@ -328,10 +339,10 @@ const BeautyAndEmbroideryWebsite = () => {
           Where Beauty Meets Art – 
             <span className="block text-pink-600">Makeup, Embroidery & Styling Perfected</span>
           </h1>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto pt-5">
           Experience the perfect blend of makeup artistry and traditional embroidery. Each creation is crafted to enhance your natural beauty and style. Let every detail reflect your elegance, confidence, and timeless charm.
           </p>
-          <div className="flex justify-center space-x-6">
+          <div className="flex justify-center space-x-6 pt-5">
             <div className="flex items-center text-pink-600">
               <Palette className="mr-2" /> Makeup Artistry
             </div>
@@ -432,7 +443,10 @@ const BeautyAndEmbroideryWebsite = () => {
 
 
       {/* Portfolio Section */}
-      <section className="py-6 px-4 bg-gradient-to-b from-white to-pink-50 pt-20 -mt-11" id='Portfolio'>
+      <section
+      className="py-6 px-4 bg-gradient-to-b from-white to-pink-50 pt-20 -mt-11"
+      id="Portfolio"
+    >
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-6 text-gray-800">Portfolio</h2>
 
@@ -460,42 +474,32 @@ const BeautyAndEmbroideryWebsite = () => {
           </button>
         </div>
 
-        {/* Image Slider */}
-        <div className="relative w-full max-w-4xl mx-auto flex justify-center items-center overflow-hidden rounded-lg shadow-lg">
-          <button
-            onClick={() => sliderRef.current?.slickPrev()}
-            className="absolute left-0 top-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg z-10"
+        {/* Auto-Scrolling Image Slider */}
+        <div className="relative w-full overflow-hidden bg-gray-100 p-4 rounded-lg shadow-lg">
+          <motion.div
+            className="flex space-x-4"
+            animate={{ x: ["0%", "-100%"] }}
+            transition={{ ease: "linear", duration: 180, repeat: Infinity }}
+            style={{ display: "flex", width: "max-content" }}
           >
-            <ChevronLeft size={24} />
-          </button>
-          <Slider ref={sliderRef} {...settings} className="w-full">
-            {portfolioImages[activePortfolio].map((image, index) => (
-              <div
-              key={index}
-              className="flex justify-center items-center h-auto overflow-hidden rounded-lg shadow-md bg-gray-100"
-            >
+            {[...portfolioImages[activePortfolio], ...portfolioImages[activePortfolio]].map(
+              (img, index) => (
                 <img
-                  src={image}
+                  key={index}
+                  src={img}
                   alt={`Portfolio ${activePortfolio} ${index + 1}`}
-                  className="w-full h-auto max-h-[500px] object-contain mx-auto"
+                  className="w-72 h-80 object-cover rounded-lg shadow-lg"
                 />
-              </div>
-            ))}
-          </Slider>
-          <button
-            onClick={() => sliderRef.current?.slickNext()}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg z-10"
-          >
-            <ChevronRight size={24} />
-          </button>
+              )
+            )}
+          </motion.div>
         </div>
       </div>
     </section>
 
 
-
-
-    <section className="py-10 px-4 bg-gradient-to-b from-white to-gray-50 pt-20" id='Reel'>
+{/* Reels/video  */}
+    <section className="pb-10 px-4 bg-gradient-to-b from-white to-gray-50 pt-20" id='Reel'>
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-6 text-gray-800">Reels</h2>
 
@@ -551,8 +555,8 @@ const BeautyAndEmbroideryWebsite = () => {
       <div className="relative w-full overflow-hidden">
         <motion.div
           className="flex space-x-4"
-          animate={{ x: ["0%", "-100%"] }}
-          transition={{ ease: "linear", duration: 120, repeat: Infinity }}
+          animate={{ x: ["0%", "-120%"] }}
+          transition={{ ease: "linear", duration: 70, repeat: Infinity }}
           style={{ display: "flex", width: "max-content" }}
         >
           {images.map((img, index) => (
@@ -560,12 +564,15 @@ const BeautyAndEmbroideryWebsite = () => {
               key={index}
               src={img}
               alt={`Slide ${index}`}
-              className="w-64 h-64 object-cover rounded-lg shadow-lg"
+              className="w-64 h-72 object-cover rounded-lg shadow-lg"
             />
           ))}
         </motion.div>
       </div>
     </div>
+
+
+    
 
       {/* About Section */}
       <section className="py-12 px-4 bg-white pt-20 -mt-11" id='About'>
