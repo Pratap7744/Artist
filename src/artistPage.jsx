@@ -339,10 +339,10 @@ const BeautyAndEmbroideryWebsite = () => {
           Where Beauty Meets Art – 
             <span className="block text-pink-600">Makeup, Embroidery & Styling Perfected</span>
           </h1>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto pt-5">
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto pt-7">
           Experience the perfect blend of makeup artistry and traditional embroidery. Each creation is crafted to enhance your natural beauty and style. Let every detail reflect your elegance, confidence, and timeless charm.
           </p>
-          <div className="flex justify-center space-x-6 pt-5">
+          <div className="flex justify-center space-x-6 pt-10">
             <div className="flex items-center text-pink-600">
               <Palette className="mr-2" /> Makeup Artistry
             </div>
