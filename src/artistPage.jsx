@@ -323,9 +323,16 @@ const BeautyAndEmbroideryWebsite = () => {
   ];
 
   // Portfolio images
+ 
   const portfolioImages = {
-    makeup: imageImports.makeup,
-    embroidery: imageImports.embroidery,
+    makeup: [
+      ff,aa,a123,
+      b,dd,
+      c,d,gg,bb,e,ee,f,g,ff,h,cc,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,
+    ],
+    embroidery: [
+      a1,a2,a3,a4,a5,a6,a7,a8,a9
+    ],
   };
 
   // Slider settings
