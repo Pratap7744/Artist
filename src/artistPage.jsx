@@ -11,37 +11,75 @@ import "slick-carousel/slick/slick-theme.css";
 import logo from "../src/assets/logo.jpg"
 
 // Import image paths but don't load them immediately
-const imageImports = {
-  makeup: [
-    "../src/assets/ff.jpg", "../src/assets/aa.jpg", "../src/assets/a.jpg",
-    "../src/assets/b.jpg", "../src/assets/dd.jpg",
-    "../src/assets/c.jpg", "../src/assets/d.jpg", "../src/assets/gg.jpg", "../src/assets/bb.jpg", 
-    "../src/assets/e.jpg", "../src/assets/ee.jpg", "../src/assets/f.jpg", "../src/assets/g.jpg", 
-    "../src/assets/ff.jpg", "../src/assets/h.jpg", "../src/assets/cc.jpg", "../src/assets/i.jpg", 
-    "../src/assets/j.jpg", "../src/assets/k.jpg", "../src/assets/l.jpg", "../src/assets/m.jpg", 
-    "../src/assets/n.jpg", "../src/assets/o.jpg", "../src/assets/p.jpg", "../src/assets/q.jpg", 
-    "../src/assets/r.jpg", "../src/assets/s.jpg", "../src/assets/t.jpg", "../src/assets/u.jpg", 
-    "../src/assets/v.jpg", "../src/assets/w.jpg", "../src/assets/x.jpg", "../src/assets/y.jpg", 
-    "../src/assets/z.jpg"
-  ],
-  embroidery: [
-    "../src/assets/a1.jpg", "../src/assets/a2.jpg", "../src/assets/a3.jpg", 
-    "../src/assets/a4.jpg", "../src/assets/a5.jpg", "../src/assets/a6.jpg", 
-    "../src/assets/a7.jpg", "../src/assets/a8.jpg", "../src/assets/a9.jpg"
-  ],
-  hairstyles: [
-    "../src/assets/h19.jpg", "../src/assets/h1.jpg", "../src/assets/h2.jpg", 
-    "../src/assets/h3.jpg", "../src/assets/h4.jpg", "../src/assets/h5.jpg", 
-    "../src/assets/h6.jpg", "../src/assets/h7.jpg", "../src/assets/h8.jpg", 
-    "../src/assets/h9.jpg", "../src/assets/h10.jpg", "../src/assets/h11.jpg", 
-    "../src/assets/h12.jpg", "../src/assets/h13.jpg", "../src/assets/h14.jpg", 
-    "../src/assets/h15.jpg", "../src/assets/h16.jpg", "../src/assets/h17.jpg", 
-    "../src/assets/h18.jpg"
-  ],
-  videos: [
-    "../src/assets/vid1.mp4", "../src/assets/vid2.mp4", "../src/assets/vid3.mp4"
-  ]
-};
+import a123 from "../src/assets/a.jpg"
+import b from "../src/assets/b.jpg"
+import c from "../src/assets/c.jpg"
+import d from "../src/assets/d.jpg"
+import e from "../src/assets/e.jpg"
+import f from "../src/assets/f.jpg"
+import g from "../src/assets/g.jpg"
+import h from "../src/assets/h.jpg"
+import i from "../src/assets/i.jpg"
+import j from "../src/assets/j.jpg"
+import k from "../src/assets/k.jpg"
+import l from "../src/assets/l.jpg"
+import m from "../src/assets/m.jpg"
+import n from "../src/assets/n.jpg"
+import o from "../src/assets/o.jpg"
+import p from "../src/assets/p.jpg"
+import q from "../src/assets/q.jpg"
+import r from "../src/assets/r.jpg"
+import s from "../src/assets/s.jpg"
+import t from "../src/assets/t.jpg"
+import u from "../src/assets/u.jpg"
+import v from "../src/assets/v.jpg"
+import w from "../src/assets/w.jpg"
+import x from "../src/assets/x.jpg"
+import y from "../src/assets/y.jpg"
+import z from "../src/assets/z.jpg"
+import aa from "../src/assets/aa.jpg"
+import bb from "../src/assets/bb.jpg"
+import cc from "../src/assets/cc.jpg"
+import ee from "../src/assets/ee.jpg"
+import ff from "../src/assets/ff.jpg"
+import gg from "../src/assets/gg.jpg"
+import dd from "../src/assets/dd.jpg"
+
+
+import a1 from "../src/assets/a1.jpg"
+import a2 from "../src/assets/a2.jpg"
+import a3 from "../src/assets/a3.jpg"
+import a4 from "../src/assets/a4.jpg"
+import a5 from "../src/assets/a5.jpg"
+import a6 from "../src/assets/a6.jpg"
+import a7 from "../src/assets/a7.jpg"
+import a8 from "../src/assets/a8.jpg"
+import a9 from "../src/assets/a9.jpg"
+
+
+import vid1 from "../src/assets/vid1.mp4"
+import vid2 from "../src/assets/vid2.mp4"
+import vid3 from "../src/assets/vid3.mp4"
+
+import h1 from "../src/assets/h1.jpg"
+import h2 from "../src/assets/h2.jpg"
+import h3 from "../src/assets/h3.jpg"
+import h4 from "../src/assets/h4.jpg"
+import h5 from "../src/assets/h5.jpg"
+import h6 from "../src/assets/h6.jpg"
+import h7 from "../src/assets/h7.jpg"
+import h8 from "../src/assets/h8.jpg"
+import h9 from "../src/assets/h9.jpg"
+import h10 from "../src/assets/h10.jpg"
+import h11 from "../src/assets/h11.jpg"
+import h12 from "../src/assets/h12.jpg"
+import h13 from "../src/assets/h13.jpg"
+import h14 from "../src/assets/h14.jpg"
+import h15 from "../src/assets/h15.jpg"
+import h16 from "../src/assets/h16.jpg"
+import h17 from "../src/assets/h17.jpg"
+import h18 from "../src/assets/h18.jpg"
+import h19 from "../src/assets/h19.jpg"
 
 // Image loader component that loads images when they become visible
 const LazyImage = ({ src, alt, className }) => {
